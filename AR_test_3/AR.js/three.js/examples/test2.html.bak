@@ -17,7 +17,7 @@
 <script src='../src/loaders/ObjectLoader.js'></script>
 <script>THREEx.ArToolkitContext.baseURL = '../'</script>
 
-
+ 
 
 		<script src="js/loaders/DDSLoader.js"></script>
 		<script src="js/loaders/MTLLoader.js"></script>
@@ -130,7 +130,7 @@
 		// barcodeValue: 5,
 		
 		type : 'pattern',
-		patternUrl : '../../data/multimarkers/multi-abcdef/patt.treefb', 
+		patternUrl : '../../data/multimarkers/multi-abcdef/patt.cb2', 
 		//patternUrl : '../../data/multimarkers/multi-abcdef/patt.td',
 	})
 	// build a smoothedControls
@@ -205,10 +205,10 @@
 	});*/
 
 	var objectLoader = new THREE.ObjectLoader();
-	objectLoader.load("models/test9.json", function ( obj ) {
+	objectLoader.load("models/CB_obj/AR_CB.json", function ( obj ) {
 		//obj.scale.x =  obj.scale.y =  obj.scale.z = 0.3;
-		obj.scale.set(3,3,3);
-		//obj.rotation.set(Math.PI,Math.PI/3.23,Math.PI) ;
+		obj.scale.set(4,4,4);
+		obj.rotation.set(Math.PI/7.5,Math.PI/10.5,Math.PI) ;
 		markerRoot.add( obj );
 				} );
 	//////////////////////////////////////////////////////////////////////////////////
@@ -221,6 +221,7 @@
 		renderer.render( scene, camera );
 		stats.update();
 	})
+	
 	
 	document.addEventListener('touchmove',function(event){
 	event.preventDefault();},false);
